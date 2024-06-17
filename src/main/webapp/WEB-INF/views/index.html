@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Song List</title>
+</head>
+<body>
+<h1>Song List</h1>
+<a href="/songs/create">Upload New Song</a>
+<ul>
+    <c:forEach items="${songs}" var="song">
+        <li>${song.title} by ${song.artist} - ${song.genre}</li>
+    </c:forEach>
+</ul>
+</body>
+</html>

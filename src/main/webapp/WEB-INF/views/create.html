@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Song</title>
+</head>
+<body>
+<h1>Upload Song</h1>
+<p>
+    <a th:href="@{/Song}">
+        Back to Song list
+    </a>
+</p>
+<form action="/songs/save" method="post" enctype="multipart/form-data">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title"><br><br>
+    <label for="artist">Artist:</label>
+    <input type="text" id="artist" name="artist"><br><br>
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" name="genre"><br><br>
+    <label for="file">File:</label>
+    <input type="file" id="file" name="file"><br><br>
+    <button type="submit">Upload</button>
+</form>
+<p>${message}</p>
+</body>
+</html>
